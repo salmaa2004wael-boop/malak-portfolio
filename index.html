@@ -1,0 +1,155 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Malak Moatasem Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: sticky nav, split hero with a tilted phone, tape strip, then alternating light and tinted sections. Same structure as Salma's page, deeper rose palette. */
+:root{--bg:#ffffff;--soft:#f8edf0;--pink:#7f1734;--deep:#5a0f25;--ink:#2a0a12;--mute:#6a4650;--line:#e6cdd4;--on-pink:#ffffff;color-scheme:light;
+--head:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;--body:'Figtree','Segoe UI',system-ui,sans-serif}
+/* single light look: burgundy on white */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px 16px;min-height:60px;flex-wrap:wrap}
+.logo{font:800 20px var(--head);text-decoration:none;color:var(--deep)}
+nav{display:flex;gap:6px 18px;flex-wrap:wrap}
+nav a{text-decoration:none;font-weight:500;color:var(--mute)}
+nav a:hover{color:var(--deep)}
+.hero{background:var(--soft);padding:72px 0 64px;border-bottom:1px solid var(--line)}
+h1{font:800 clamp(32px,6.2vw,64px)/1.06 var(--head);letter-spacing:-.02em;margin:0 0 20px;max-width:16ch;text-wrap:balance}
+h1 span{background:var(--pink);color:var(--on-pink);padding:0 .18em;border-radius:.18em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.lead{max-width:56ch;color:var(--mute);font-size:19px;margin:0 0 16px}
+.lead-list{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:8px;color:var(--mute);font-size:18px}
+.lead-list li{padding-left:26px;position:relative}
+.lead-list li::before{content:"";position:absolute;left:0;top:.6em;width:12px;height:12px;border-radius:50%;background:var(--pink)}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--pink);color:var(--deep)}
+.btn.main{background:var(--pink);color:var(--on-pink)}
+.btn:hover{background:var(--deep);border-color:var(--deep);color:var(--bg)}
+.stats{display:flex;gap:20px 36px;flex-wrap:wrap;margin-top:44px}
+.stats b{display:block;font:800 34px/1 var(--head);color:var(--deep);font-variant-numeric:tabular-nums}
+.stats small{color:var(--mute);font-size:15px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:24px;align-items:center}
+.hero-text{display:contents}
+.hero-text>*{grid-column:1/-1}
+.hero-text>h1{grid-column:1;grid-row:1}
+.hero-grid>.phone{grid-column:2;grid-row:1}
+.phone{margin:0 12px 2em 0;font-size:clamp(6px,1.8vw,10px);width:14em;aspect-ratio:9/17;border:.7em solid var(--deep);border-radius:2.8em;overflow:hidden;background:var(--pink);box-shadow:1em 1em 0 var(--deep);transform:rotate(3deg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1em;color:var(--on-pink);text-align:center;padding:1.5em}
+.phone svg{width:5em;height:5em}
+.phone b{font:800 2em var(--head);letter-spacing:-.01em}
+.phone span{opacity:.9;max-width:16ch}
+.phone i{font-style:normal;background:var(--on-pink);color:var(--deep);font-weight:600;font-size:.95em;padding:.6em 1.4em;border-radius:999px;margin-top:.4em}
+.tape{background:var(--deep);color:var(--bg);padding:12px 0;overflow:hidden;white-space:nowrap;font:700 18px var(--head)}
+.tape p{margin:0;display:inline-block;padding-left:100%;animation:slide 26s linear infinite}
+@keyframes slide{to{transform:translateX(-100%)}}
+@media (prefers-reduced-motion:reduce){.tape p{animation:none;padding-left:22px}html{scroll-behavior:auto}}
+section{padding:68px 0}
+h2{font:800 clamp(28px,4vw,40px)/1.1 var(--head);margin:0 0 24px;color:var(--deep);text-wrap:balance}
+h3{font:700 20px/1.25 var(--head);margin:0 0 8px}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px}
+.about>*{min-width:0}
+.about p{margin:0 0 14px;max-width:60ch}
+.facts{display:grid;gap:12px;align-content:start}
+.facts div{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:14px 18px}
+.facts b{display:block;color:var(--deep)}
+.alt-bg{background:var(--soft);border-block:1px solid var(--line)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:26px}
+.skills h3{color:var(--deep)}
+ul.tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+ul.tags li{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:15px}
+.proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px}
+.card{background:var(--bg);border:2px solid var(--line);border-radius:22px;padding:26px;min-width:0;display:flex;flex-direction:column;align-items:flex-start}
+.card .sub{color:var(--mute);margin:0 0 14px}
+.card ul.pts{margin:16px 0 20px;padding-left:20px;color:var(--mute)}
+.card ul.pts li{margin-bottom:6px}
+.card .btns{margin-top:auto}
+.jobs{display:grid;gap:24px}
+.job{border-left:4px solid var(--pink);padding-left:22px}
+.job .meta{color:var(--mute);margin:0 0 8px}
+.job ul{margin:8px 0 0;padding-left:20px;color:var(--mute)}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px;margin-top:40px}
+.edu div{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.edu h3{color:var(--deep)}
+.edu p{margin:0;color:var(--mute);font-size:16px}
+.contact{background:var(--pink);color:var(--on-pink);text-align:center}
+.contact h2{color:var(--on-pink)}
+.contact p{max-width:50ch;margin:0 auto 24px}
+.contact .btn{border-color:var(--on-pink);color:var(--on-pink)}
+.contact .btn.main{background:var(--on-pink);color:var(--deep)}
+.contact .btn:hover{background:var(--bg);color:var(--deep);border-color:var(--bg)}
+.contact .btns{justify-content:center}
+.contact address{font-style:normal;margin-top:26px;font-size:16px;overflow-wrap:anywhere;user-select:all}
+@media(max-width:860px){.hero{padding-bottom:56px}}
+@media(max-width:720px){.about{grid-template-columns:1fr}section{padding:52px 0}.hero{padding:52px 0 48px}}
+</style>
+
+<header><div class="wrap"><a class="logo" href="#about">Malak Moatasem</a>
+<nav aria-label="Main"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav></div></header>
+
+<main>
+<div class="hero"><div class="wrap"><div class="hero-grid"><div class="hero-text">
+<h1><span>Malak Moatasem</span> builds mobile apps and designs how they feel.</h1>
+<p class="lead">Computer Science graduate from Beni Suef, Egypt.</p>
+<ul class="lead-list"><li>I design interfaces in Figma.</li><li>I build them in Flutter and Dart.</li><li>I create the graphics and branding that go with them.</li></ul>
+<div class="btns"><a class="btn main" href="#projects">See my projects</a><a class="btn" href="https://mail.google.com/mail/?view=cm&amp;to=Malakmoatasem0@gmail.com">Email me</a><a class="btn" href="https://www.linkedin.com/in/malak-moatasem-00b524317">LinkedIn</a><a class="btn" href="https://github.com/salmaa2004wael-boop">GitHub</a></div>
+<div class="stats"><div><b>2</b><small>Flutter apps built</small></div><div><b>1 year</b><small>Freelance design work</small></div><div><b>3.3 / 4.0</b><small>Cumulative GPA</small></div></div>
+</div>
+<figure class="phone" aria-label="Illustration of the Meshwar app welcome screen">
+<svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 6c-9.4 0-17 7.4-17 16.6C15 35 32 58 32 58s17-23 17-35.400C49 13.400 41.400 6 32 6Z" fill="#fff"/><circle cx="32" cy="22.500" r="6.500" fill="#7f1734"/></svg>
+<b>Meshwar</b><span>Discover nearby services</span><i>Get Started</i></figure>
+</div></div></div>
+<div class="tape" aria-hidden="true"><p>Flutter ✦ Dart ✦ Figma ✦ UI/UX ✦ Graphic design ✦ Photoshop ✦ Canva ✦ Flutter ✦ Dart ✦ Figma ✦ UI/UX ✦ Graphic design ✦ Photoshop ✦ Canva ✦</p></div>
+
+<section id="about"><div class="wrap"><h2>About me</h2><div class="about">
+<div><p>I’m a detail-oriented developer and designer. I like taking an app from user research and wireframes to a working Flutter interface that adapts to different screen sizes.</p>
+<p>For my graduation project, Meshwar, I was both the UI/UX designer and the Flutter developer. I trained in Flutter at the Information Technology Institute (ITI) and in networking at the National Telecommunication Institute (NTI), and I’ve done freelance graphic design for a year.</p></div>
+<div class="facts"><div><b>B.Sc. Computer Science, IT</b>Nahda University, class of 2026</div><div><b>Flutter and Figma</b>Design and build in the same hands</div><div><b>Arabic and English</b>Native Arabic, very good English</div></div>
+</div></div></section>
+
+<section id="skills" class="alt-bg"><div class="wrap"><h2>Skills</h2><div class="skills">
+<div><h3>Mobile development</h3><ul class="tags"><li>Flutter</li><li>Dart</li><li>Responsive UI layouts</li><li>Platform adaptations</li><li>Clean code</li></ul></div>
+<div><h3>UI/UX design</h3><ul class="tags"><li>Figma</li><li>Wireframing</li><li>Prototyping</li><li>User research</li><li>User personas</li><li>User journeys</li><li>Information architecture</li><li>User flows</li></ul></div>
+<div><h3>Graphic design</h3><ul class="tags"><li>Adobe Photoshop</li><li>Canva</li><li>Image editing</li><li>Branding basics</li><li>Logo design</li><li>Social media content</li></ul></div>
+<div><h3>Working with people</h3><ul class="tags"><li>Teamwork</li><li>Problem solving</li><li>Written and verbal communication</li><li>Presentation</li><li>Time management</li><li>Data entry</li><li>Inventory data</li></ul></div>
+</div></div></section>
+
+<section id="projects"><div class="wrap"><h2>Projects</h2><div class="proj">
+<article class="card"><h3>Meshwar</h3><p class="sub">Location-based mobile app, graduation project</p>
+<ul class="tags"><li>Flutter</li><li>Dart</li><li>Figma</li><li>UI/UX</li></ul>
+<ul class="pts"><li>Designed an interactive cross-platform app that helps users discover nearby services.</li><li>Ran user research, mapped the user flows and built high-fidelity prototypes in Figma.</li><li>Programmed the front end in Flutter with interactive map functionality and responsive screens.</li></ul>
+<div class="btns"><a class="btn main" href="https://meshwar-three.vercel.app/">Live demo</a></div></article>
+<article class="card"><h3>Bola Designs</h3><p class="sub">Mobile app for a commercial design agency</p>
+<ul class="tags"><li>Flutter</li><li>Supabase</li><li>UI/UX</li></ul>
+<ul class="pts"><li>Built and shipped an app that showcases the agency’s portfolio and services.</li><li>Created interactive UI components, custom widgets and a simple booking flow.</li><li>Connected Supabase for user sign-in, live database queries and cloud file storage.</li></ul>
+<div class="btns"><a class="btn main" href="https://play.google.com/store/apps/details?id=com.boladesigns.app&amp;pcampaignid=web_share">Get it on Google Play</a></div></article>
+<article class="card"><h3>UI/UX and Graphic Portfolio</h3><p class="sub">Independent design work</p>
+<ul class="tags"><li>UI/UX</li><li>Figma</li><li>Photoshop</li><li>Canva</li></ul>
+<ul class="pts"><li>Mobile and web interface designs focused on user empathy and clear navigation.</li><li>Logos, visual identity and social media graphics for different clients.</li></ul></article>
+</div></div></section>
+
+<section id="experience" class="alt-bg"><div class="wrap"><h2>Experience and training</h2><div class="jobs">
+<div class="job"><h3>Freelance Graphic Designer and Data Entry Specialist</h3><p class="meta">1 year of practical experience</p><ul>
+<li>Designed logos, visual identities and social media branding for a range of clients.</li><li>Organized and cataloged large business inventories and product listings accurately.</li><li>Kept colors accurate with hex codes and optimized image resolution without losing detail.</li></ul></div>
+<div class="job"><h3>Flutter Mobile Application Development, intensive course</h3><p class="meta">Information Technology Institute (ITI), July 2024</p><ul>
+<li>Cross-platform mobile architecture, building front ends and responsive app layouts.</li></ul></div>
+<div class="job"><h3>Network Architecture and Engineering course</h3><p class="meta">National Telecommunication Institute (NTI), September 2023</p><ul>
+<li>Fundamentals of networking, routing and switching.</li></ul></div>
+</div>
+<div class="edu">
+<div><h3>B.Sc. Computer Science</h3><p>Information Technology department, Nahda University. Class of 2026, GPA 3.3 / 4.0.</p></div>
+<div><h3>Languages</h3><p>Arabic (native) and English (very good).</p></div>
+</div></div></section>
+
+<section id="contact" class="contact"><div class="wrap"><h2>Let’s work together</h2>
+<p>I’m open to Flutter developer roles, UI/UX and graphic design work. Send me a message and I’ll reply soon.</p>
+<div class="btns"><a class="btn main" href="https://mail.google.com/mail/?view=cm&amp;to=Malakmoatasem0@gmail.com">Send an email</a><a class="btn" href="https://www.linkedin.com/in/malak-moatasem-00b524317">LinkedIn</a><a class="btn" href="https://github.com/salmaa2004wael-boop">GitHub</a></div>
+<address>Malakmoatasem0@gmail.com<br>+20 12 71122860<br>Malak Moatasem Rady · Beni Suef, Egypt</address>
+</div></section>
+</main>
+
+</body></html>
